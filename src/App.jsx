@@ -11,14 +11,14 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const initialData = {
+  
+
+  const [data, setData] = useState({
     username: "",
     email: "",
     password: "",
     confirmPassword: "",   
-  };  
-
-  const [data, setData] = useState(initialData)
+  })
   const [check ,setCheck] = useState(false)
   const [error, setError] = useState({})
 
@@ -91,8 +91,7 @@ function App() {
     if (Object.keys(validate).length == 0) {
       setSuccess(`SIGN UP SUCCESSFULL 🎉`)
       display.style.display = "block";
-      head.style.display = "none";
-      setData(initialData)
+      head.style.display = "none";     
       
     }
 
